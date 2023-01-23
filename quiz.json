@@ -1,0 +1,101 @@
+[
+    {
+        "question" : "Que signifie HTML ?",
+        "answers" : [
+            "HomeTabulation of Mailing List",
+            "HyperText Markup Language",
+            "Hyperspace TradeMark Language",
+            "Toutes les mentions si dessus"
+        ],
+        "goodAnswer" : "HyperText Markup Language",
+        "modal" : "HTML signifie « HyperText Markup Language » qu'on peut traduire par « langage de balises pour l'hypertexte »"
+    },
+    {
+        "question" : "Comment représenter un paragraphe en HTML ?",
+        "answers" : [
+            "<ul> </ul>",
+            "<div> </div>",
+            "<paragraph> </paragraph>",
+            "<p> </p>"
+        ],
+        "goodAnswer" : "<p> </p>",
+        "modal" : "La balise <p> est utilisée pour représenter un paragraphe en HTML. Attention de ne pas utiliser <paragraph> qui n'existe pas"
+    },
+    {
+        "question" : "Dans quelle partie du HTML se déclarent les metadonnées ?",
+        "answers" : [
+            "Dans le <header>",
+            "Dans le <head>",
+            "A la fin du <body>",
+            "Dans le <footer>"
+        ],
+        "goodAnswer" : "Dans le <head>",
+        "modal" : "Les metadonnées se déclarent dans la partie <head> tout comme les liens css ou le titre de la page"
+    },
+    {
+        "question" : "Comment écrit-on un commentaire dans en HTML ?",
+        "answers" : [
+            "<!--  -->",
+            "</-- -->",
+            "<;-- -->",
+            "<comment-- -->"
+        ],
+        "goodAnswer" : "<!--  -->",
+        "modal" : "<!-- Un commentaire s'écrit ainsi dans le html -->"
+    },
+    {
+        "question" : "Quel attribut permet d'ouvrir un lien dans un nouvel onglet ?",
+        "answers" : [
+            "src = _blank",
+            "target = _blank",
+            "target = _self",
+            "alt = _blank"
+        ],
+        "goodAnswer" : "target = _blank",
+        "modal" : "Cet attribut permet d'ouvrir l'élément dans un nouvel onglet (notamment la balise <a>)"
+    },
+    {
+        "question" : "Que signifie CSS ?",
+        "answers" : [
+            "Creer Son Style",
+            "Create Simple Style",
+            "Cascading Style Sheets",
+            "Choucroute et Saussice de Strasbourg"
+        ],
+        "goodAnswer" : "Cascading Style Sheets",
+        "modal" : "CSS signifie « Cascading Style Sheets » qu'on peut traduire par « Feuilles de style en cascade»"
+    },
+    {
+        "question" : "A quoi sert le CSS ?",
+        "answers" : [
+            "A mettre en forme ses pages web",
+            "A optimiser le référencement de son site",
+            "A augmenter les performances de son site",
+            "A rien, c'est une perte de temps"
+        ],
+        "goodAnswer" : "A mettre en forme ses pages web",
+        "modal" : "Le CSS sert à mettre en forme ses pages web pour les rendre plus esthétiques mais aussi pour les adapter à tous les écrans"
+    },
+    {
+        "question" : "Ou est il conseillé de placer le code CSS ?",
+        "answers" : [
+            "Dans le body",
+            "Dans le head",
+            "Dans le header",
+            "Dans le footer"
+        ],
+        "goodAnswer" : "Dans le head",
+        "modal" : "Tout comme les metadonnées ou le titre d'une page, le code pour lier le CSS se place dans entre les balises <head>"
+    },
+    {
+        "question" : "Combien de régles peut contenir un fichier ?",
+        "answers" : [
+            "Il n'y a pas de limite, on peut en créer autant que l'on veut",
+            "Le poids du fichier ne doit pas excéder 20ko",
+            "150 à plus ou moins 10%",
+            "Cela dépend du navigateur"
+        ],
+        "goodAnswer" : "Il n'y a pas de limite, on peut en créer autant que l'on veut",
+        "modal" : "Le nombre de régle CSS n'est pas limité et cela n'impact pas les performances de la page"
+    }
+]

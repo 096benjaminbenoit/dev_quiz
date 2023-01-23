@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>DEV QUIZ v2</title>
+</head>
+<body>
+    <h1 class="quiz__title">DEV QUIZ V2</h1>
+    <h2 class="quiz__intro">Testez vos connaissances en développement web !</h2>
+    <button class="quiz__play">JOUER !</button>
+
+    <form class="quiz_container" action="">
+        <h2 class="quiz_container__score">Votre score : 0pts</h2>
+        <h2 class="quiz_container__question">Intitulé de la question</h2>
+        <input class="quiz_container__input1" type="radio" name="answer" id="answer1">
+        <label class="quiz_container__label1" for="answer1">Réponse n°1</label>
+        <input class="quiz_container__input2" type="radio" name="answer" id="answer2">
+        <label class="quiz_container__label2" for="answer2">Réponse n°2</label>
+        <input class="quiz_container__input3" type="radio" name="answer" id="answer3">
+        <label class="quiz_container__label3" for="answer3">Réponse n°3</label>
+        <input class="quiz_container__input4" type="radio" name="answer" id="answer4">
+        <label class="quiz_container__label4" for="answer4">Réponse n°4</label>
+        <div class="quiz_container_buttons">
+            <button class="quiz_container_buttons__validation" type="submit">VALIDER</button>
+            <button class="quiz_container_buttons__next">SUIVANT</button>
+        </div>
+    </form>
+    
+    <div class="quiz_modal">
+        <div class="quiz_modal_content">
+            <button class="quiz_modal_content_close">
+                <svg class="quiz_modal_content_close__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+                </svg>
+            </button>
+            <p class="quiz_modal_content__text">Je suis le contenu de la modal</p>
+        </div>
+    </div>
+
+    <form class="quiz_leaderboard" action="">
+        <h2 class="quiz_leaderboard__title">TABLEAU DES SCORES</h2>
+        <div class="quiz_leaderboard_pseudo">
+            <input class="quiz_leaderboard_pseudo__input" type="text" placeholder="Votre pseudo ...">
+            <button class="quiz_leaderboard_pseudo__validation">VALIDER</button>
+        </div>
+        <div class="quiz_leaderboard_player1">
+            <h3 class="quiz_leaderboard_player1__name">JOUEUR 1</h3>
+            <h3 class="quiz_leaderboard_player1__score">XXpts</h3>
+        </div>
+        <hr class="quiz_leaderboard__line">
+        <div class="quiz_leaderboard_player2">
+            <h3 class="quiz_leaderboard_player2__name">JOUEUR 2</h3>
+            <h3 class="quiz_leaderboard_player2__score">XXpts</h3>
+        </div>
+        <hr class="quiz_leaderboard__line">
+        <div class="quiz_leaderboard_player3">
+            <h3 class="quiz_leaderboard_player3__name">JOUEUR 3</h3>
+            <h3 class="quiz_leaderboard_player3__score">XXpts</h3>
+        </div>
+        <hr class="quiz_leaderboard__line">
+        <div class="quiz_leaderboard_player4">
+            <h3 class="quiz_leaderboard_player4__name">JOUEUR 4</h3>
+            <h3 class="quiz_leaderboard_player4__score">XXpts</h3>
+        </div>
+        <hr class="quiz_leaderboard__line">
+        <div class="quiz_leaderboard_player5">
+            <h3 class="quiz_leaderboard_player5__name">JOUEUR 5</h3>
+            <h3 class="quiz_leaderboard_player5__score">XXpts</h3>
+        </div>
+    </form>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -21,8 +21,14 @@ body {
         color: white;
         font-size: 36px;
         text-align: center;
-        margin-top: 50px;
+        margin-top: 150px;
         font-weight: 800;
+        text-shadow: 2px 3px 6px rgba(0, 0, 0, 0.65);
+        transition: all 0.2s ease;
+
+        @media screen and (min-width: 768px) {
+            font-size: 86px;
+        }
     }
 
     .quiz__intro {
@@ -41,6 +47,12 @@ body {
         padding: 10px 20px;
         border-radius: 30px;
         transition: all 0.2s ease;
+        box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.279);
+
+        @media screen and (min-width: 768px) {
+            padding: 15px 30px;
+            font-size: 18px;
+        }
 
         &:hover {
             background-color: white;
@@ -59,6 +71,10 @@ body {
         border-radius: 20px;
         padding: 20px;
         width: 270px;
+
+        @media screen and (min-width: 768px) {
+            width: 450px;
+        }
 
         &__score {
             color: white;
@@ -93,9 +109,13 @@ body {
                 font-size: 14px;   
                 padding: 5px 10px;
                 margin: 5px 0px;
-                width: 200px;
-                height: 100px;
+                width: 70%;
+                height: 80px;
                 transition: all 0.2s ease;
+
+                @media screen and (min-width: 768px) {
+                    height: 50px;
+                }
             }
 
             &:hover + label {
@@ -122,9 +142,13 @@ body {
                 text-align: center;
                 padding: 5px 10px;
                 margin: 5px 0px;
-                width: 200px;
-                height: 100px;
+                width: 70%;
+                height: 80px;
                 transition: all 0.2s ease;
+
+                @media screen and (min-width: 768px) {
+                    height: 50px;
+                }
             }
 
             &:hover + label {
@@ -151,9 +175,13 @@ body {
                 text-align: center;
                 padding: 5px 10px;
                 margin: 5px 0px;
-                width: 200px;
-                height: 100px;
+                width: 70%;
+                height: 80px;
                 transition: all 0.2s ease;
+
+                @media screen and (min-width: 768px) {
+                    height: 50px;
+                }
             }
 
             &:hover + label {
@@ -180,9 +208,13 @@ body {
                 text-align: center;
                 padding: 5px 10px;
                 margin: 5px 0px;
-                width: 200px;
-                height: 100px;
+                width: 70%;
+                height: 80px;
                 transition: all 0.2s ease;
+
+                @media screen and (min-width: 768px) {
+                    height: 50px;
+                }
             }
 
             &:hover + label {
@@ -211,6 +243,8 @@ body {
                 border-radius: 30px;
                 padding: 5px 10px;
                 transition: all 0.2s ease;
+                box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.279);
+
 
                 &:hover {
                     background-color: #FFBB33;
@@ -227,6 +261,8 @@ body {
                 border-radius: 30px;
                 padding: 5px 10px;
                 transition: all 0.2s ease;
+                box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.279);
+
 
                 &:hover {
                     background-color: #FFBB33;
@@ -257,6 +293,11 @@ body {
             border-radius: 20px;
             padding: 10px;
             width: 270px;
+
+            @media screen and (min-width: 768px) {
+                width: 400px;
+                font-size: 15px;
+            }
 
             &_close {
                 align-self: flex-end;
@@ -289,8 +330,12 @@ body {
         margin-top: 30px;
         background-color: white;
         border-radius: 20px;
-        padding: 10px;
+        padding: 20px 10px;
         width: 270px;
+
+        @media screen and (min-width: 768px) {
+            width: 450px;
+        }
 
         &__title {
             color: #ee5522;
@@ -318,6 +363,8 @@ body {
                 padding: 5px 10px;
                 border-radius: 30px;
                 transition: all 0.2s ease;
+                box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.279);
+
 
                 &:hover {
                     background-color: #FFBB33;
@@ -328,13 +375,22 @@ body {
 
         &_player1 {
             margin-top: 20px;
+            width: 250px;
             display: flex;
             flex-direction: row;
+            justify-content: space-between;
+            padding: 0 30px;
+
+            @media screen and(min-width: 768px) {
+                width: 400px;
+                padding: 0 80px;
+            }
 
             &__name {
                 color: #ee5522;
                 margin-top: 5px;
                 margin-right: 10px;
+                text-transform: uppercase;
             }
 
             &__score {
@@ -346,12 +402,21 @@ body {
         
         &_player2 {
             margin-top: 20px;
+            width: 250px;
             display: flex;
             flex-direction: row;
+            justify-content: space-between;
+            padding: 0 30px;
+
+            @media screen and(min-width: 768px) {
+                width: 400px;
+                padding: 0 80px;
+            }
 
             &__name {
                 color: #ee5522;
                 margin-right: 10px;
+                text-transform: uppercase;
             }
 
             &__score {
@@ -362,12 +427,21 @@ body {
 
         &_player3 {
             margin-top: 20px;
+            width: 250px;
             display: flex;
             flex-direction: row;
+            justify-content: space-between;
+            padding: 0 30px;
+
+            @media screen and(min-width: 768px) {
+                width: 400px;
+                padding: 0 80px;
+            }
 
             &__name {
                 color: #ee5522;
                 margin-right: 10px;
+                text-transform: uppercase;
             }
 
             &__score {
@@ -378,12 +452,21 @@ body {
 
         &_player4 {
             margin-top: 20px;
+            width: 250px;
             display: flex;
             flex-direction: row;
+            justify-content: space-between;
+            padding: 0 30px;
+
+            @media screen and(min-width: 768px) {
+                width: 400px;
+                padding: 0 80px;
+            }
 
             &__name {
                 color: #ee5522;
                 margin-right: 10px;
+                text-transform: uppercase;
             }
 
             &__score {
@@ -394,13 +477,22 @@ body {
 
         &_player5 {
             margin-top: 20px;
+            width: 250px;
             display: flex;
             flex-direction: row;
+            justify-content: space-between;
+            padding: 0 30px;
+
+            @media screen and(min-width: 768px) {
+                width: 400px;
+                padding: 0 80px;
+            }
 
             &__name {
                 color: #ee5522;
                 margin-right: 10px;
                 margin-bottom: 10px;
+                text-transform: uppercase;
             }
 
             &__score {
@@ -414,6 +506,10 @@ body {
             width: 200px;
             margin-top: 10px;
             border: solid #ee5522;
+
+            @media screen and (min-width: 768px) {
+                width: 300px;
+            }
         }
     }
 }

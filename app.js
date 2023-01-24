@@ -5,6 +5,13 @@ fetch("quiz.json")
 .then(function(data) {
     const infos = data;
 
+    // MODIFIER LA MARGE TOP DU  TITRE QUAND ON PASSE SUR LE QUESTIONNAIRE // 
+    const titleWebsite = document.querySelector(".quiz__title");
+
+    function styleTitleWebsite() {
+        titleWebsite.style = "margin-top: 50px"
+    }
+
     // FAIRE DISPARAITRE L'ACCUEIL POUR FAIRE APPARAITRE LE QUESTIONNAIRE //
     const btnQuizPlay = document.querySelector(".quiz__play");
     const quizIntro = document.querySelector(".quiz__intro");
@@ -18,6 +25,7 @@ fetch("quiz.json")
         quizPlay.style.display = "none";
         quizContainer.style.display ="flex";
         replaceContent();
+        styleTitleWebsite()
     }
 
     // MÉLANGER LA TABLE DANS LE JSON //
@@ -109,6 +117,8 @@ fetch("quiz.json")
             newScore++;
         }
 
+    // CHANGER DE COULEUR SI RÉPONSE FAUSSE //
+
         if (typechoice1.checked && randomizeJson[index].answers[0] != randomizeJson[index].goodAnswer) {
             choice1Text.style = "background-color: red;"
         } if (typechoice2.checked && randomizeJson[index].answers[1] != randomizeJson[index].goodAnswer) {
@@ -143,21 +153,24 @@ fetch("quiz.json")
         choice4Text.textContent = randomizeJson[index].answers[3];     
     }
 
+    // FAIRE APPARAITRE LE LEADERBOARD A LA FIN DU QUESTIONNAIRE //
     const leaderboardPage = document.querySelector(".quiz_leaderboard")
 
     function displayLeaderboard() {
         if(index >= 8) {
             questionsForm.style = "display: none;";
             leaderboardPage.style = "display: flex;";
+            displayScores();
         }
     }
+
+                         // GESTION DU LEADERBOARD // 
 
     const player1 = document.querySelector(".quiz_leaderboard_player1__name") ;
     const player2 = document.querySelector(".quiz_leaderboard_player2__name") ;
     const player3 = document.querySelector(".quiz_leaderboard_player3__name") ;
     const player4 = document.querySelector(".quiz_leaderboard_player4__name") ;
     const player5 = document.querySelector(".quiz_leaderboard_player5__name") ;
-
     
     const scorePlayer1 = document.querySelector(".quiz_leaderboard_player1__score");
     const scorePlayer2 = document.querySelector(".quiz_leaderboard_player2__score");
@@ -168,45 +181,57 @@ fetch("quiz.json")
     const btnLeaderboardValidation = document.querySelector(".quiz_leaderboard_pseudo__validation");
     const playerName = document.querySelector(".quiz_leaderboard_pseudo__input");
     
-    btnLeaderboardValidation.addEventListener("click", LeaderboardValidation);
+    function storage () {
 
+               // CRÉER MON TABLEAU VIDE //
+               if( localStorage.getItem("data") == null) {
+                localStorage.setItem("data", "[]");
+            }
     
-    let leaderboardPlayers = {
-        name: playerName.value,
-        score: newScore
-    }
-    let old_data = JSON.parse(localStorage.getItem("data"));
-    let leaderboardStored = JSON.parse(localStorage.getItem("data"));
+            // CREER LES OBJETS //
+            let leaderboardPlayers = {
+                name: playerName.value,
+                score: newScore
+            }
+    
+            let old_data = JSON.parse(localStorage.getItem("data"));
+            old_data.push(leaderboardPlayers);
+    
+            localStorage.setItem("data", JSON.stringify(old_data));
+    
+            displayScores()
 
-    function replaceLeaderboardContent() {
+            leaderboardPage.reset();
+
         
-        player1.textContent = leaderboardStored[0].name;
-        scorePlayer1.textContent = leaderboardStored[0].score + "pts";
-        player2.textContent = leaderboardStored[1].name;
-        scorePlayer2.textContent = leaderboardStored[1].score + "pts";
-        player3.textContent = leaderboardStored[2].name;
-        scorePlayer3.textContent = leaderboardStored[2].score + "pts";
-        player4.textContent = leaderboardStored[3].name;
-        scorePlayer4.textContent = leaderboardStored[3].score + "pts";
-        player5.textContent = leaderboardStored[4].name;
-        scorePlayer5.textContent = leaderboardStored[4].score + "pts";
     }
 
-    replaceLeaderboardContent();
+    function displayScores() {
+
+        let leaderboardStored = JSON.parse(localStorage.getItem("data"));
     
+            // TRIER LE TABLEAU DES SCORES //
+            leaderboardStored.sort((a, b) => {
+                return b.score - a.score
+            })
+    
+            console.log(leaderboardStored);
+            player1.textContent = leaderboardStored[0].name;
+            scorePlayer1.textContent = leaderboardStored[0].score + "pts";
+            player2.textContent = leaderboardStored[1].name;
+            scorePlayer2.textContent = leaderboardStored[1].score + "pts";
+            player3.textContent = leaderboardStored[2].name;
+            scorePlayer3.textContent = leaderboardStored[2].score + "pts";
+            player4.textContent = leaderboardStored[3].name;
+            scorePlayer4.textContent = leaderboardStored[3].score + "pts";
+            player5.textContent = leaderboardStored[4].name;
+            scorePlayer5.textContent = leaderboardStored[4].score + "pts";
+    }
+
+    btnLeaderboardValidation.addEventListener("click", LeaderboardValidation);  
+
     function LeaderboardValidation(event) {
         event.preventDefault();
-
-        if( localStorage.getItem("data") == null) {
-            localStorage.setItem("data", "[]");
-        }
-
-        old_data.push(leaderboardPlayers);
-        localStorage.setItem("data", JSON.stringify(old_data));
-        leaderboardStored.sort((a, b) => {
-            return b.score - a.score
-        })
-
-        replaceLeaderboardContent()
+        storage();
     }
 })

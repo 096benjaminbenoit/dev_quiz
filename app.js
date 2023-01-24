@@ -165,28 +165,48 @@ fetch("quiz.json")
     const scorePlayer4 = document.querySelector(".quiz_leaderboard_player4__score");
     const scorePlayer5 = document.querySelector(".quiz_leaderboard_player5__score");
 
-    // function replaceContentLeaderboard {
-    //     player1.textContent = local storage
-    //     player2.textContent = local storage
-    //     player3.textContent = local storage
-    //     player4.textContent = local storage
-    //     player5.textContent = local storage
-    //     scorePlayer1.textContent = local storage
-    //     scorePlayer2.textContent = local storage
-    //     scorePlayer3.textContent = local storage
-    //     scorePlayer4.textContent = local storage
-    //     scorePlayer5.textContent = local storage
-    // }
-
     const btnLeaderboardValidation = document.querySelector(".quiz_leaderboard_pseudo__validation");
     const playerName = document.querySelector(".quiz_leaderboard_pseudo__input");
     
     btnLeaderboardValidation.addEventListener("click", LeaderboardValidation);
 
+    
+    let leaderboardPlayers = {
+        name: playerName.value,
+        score: newScore
+    }
+    let old_data = JSON.parse(localStorage.getItem("data"));
+    let leaderboardStored = JSON.parse(localStorage.getItem("data"));
 
-    function LeaderboardValidation(event) {
-        event.preventDefault();
-        console.log(playerName.value);
+    function replaceLeaderboardContent() {
+        
+        player1.textContent = leaderboardStored[0].name;
+        scorePlayer1.textContent = leaderboardStored[0].score + "pts";
+        player2.textContent = leaderboardStored[1].name;
+        scorePlayer2.textContent = leaderboardStored[1].score + "pts";
+        player3.textContent = leaderboardStored[2].name;
+        scorePlayer3.textContent = leaderboardStored[2].score + "pts";
+        player4.textContent = leaderboardStored[3].name;
+        scorePlayer4.textContent = leaderboardStored[3].score + "pts";
+        player5.textContent = leaderboardStored[4].name;
+        scorePlayer5.textContent = leaderboardStored[4].score + "pts";
     }
 
+    replaceLeaderboardContent();
+    
+    function LeaderboardValidation(event) {
+        event.preventDefault();
+
+        if( localStorage.getItem("data") == null) {
+            localStorage.setItem("data", "[]");
+        }
+
+        old_data.push(leaderboardPlayers);
+        localStorage.setItem("data", JSON.stringify(old_data));
+        leaderboardStored.sort((a, b) => {
+            return b.score - a.score
+        })
+
+        replaceLeaderboardContent()
+    }
 })

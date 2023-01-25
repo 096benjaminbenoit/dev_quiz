@@ -161,7 +161,7 @@ fetch("quiz.json")
     const leaderboardPage = document.querySelector(".quiz_leaderboard")
 
     function displayLeaderboard() {
-        if(index >= 8) {
+        if(index >= 17) {
             questionsForm.style = "display: none;";
             leaderboardPage.style = "display: flex;";
             displayScores();

@@ -97,5 +97,104 @@
         ],
         "goodAnswer" : "Il n'y a pas de limite, on peut en créer autant que l'on veut",
         "modal" : "Le nombre de régle CSS n'est pas limité et cela n'impact pas les performances de la page"
+    },    
+    {
+        "question" : "Qu'est ce qu'un site responsive ?",
+        "answers" : [
+            "Un site esthétique",
+            "Un site adapté aux personnes handicapées",
+            "Un site adapté à toutes les tailles d'écran",
+            "Un site plus rapide que la moyenne"
+        ],
+        "goodAnswer" : "Un site adapté à toutes les tailles d'écran",
+        "modal" : "Un site responsive permet aux utilisateurs de naviguer facilement, quel que soit leur taille d'écran"
+    },    
+    {
+        "question" : "A quoi servent les media queries ?",
+        "answers" : [
+            "A importer des images",
+            "A importer des vidéos",
+            "A faire évoluer le contenu selon la lanue du site",
+            "A faire évoluer le contenu selon la taille de l'écran"
+        ],
+        "goodAnswer" : "A faire évoluer le contenu selon la taille de l'écran",
+        "modal" : "Les media queries servent à dire aux navigateurs commment se comportent les éléments d'une page selon la taille de l'écran"
+    },    
+    {
+        "question" : "Comment déclarer les media queries ?",
+        "answers" : [
+            "@media screen {}",
+            "@media queries {}",
+            "@media adapt {}",
+            "@media kiries {}"
+        ],
+        "goodAnswer" : "@media screen {}",
+        "modal" : "Les media queries se déclarent dans le CSS en écrivant @media screen {} et en précisant dans les accolades la taille de l'écran et la modification de l'élément"
+    },
+    {
+        "question" : "Qu'est ce que le JavaScript ?",
+        "answers" : [
+            "Une extension VS Code",
+            "Un langage de programmation",
+            "Un pluggin Google Chrome",
+            "Une nouvelle version de Java"
+        ],
+        "goodAnswer" : "Un langage de programmation",
+        "modal" : "Le JavaScript est un langage de programmation, attention de ne pas confondre avec Java"
+    },
+    {
+        "question": "Laquelle de ces propositions correspond à une déclaration et une initialisation de variable valable ?",
+        "answers": [
+            "let my variable = 12;",
+            "let myVariable = 12;",
+            "variable myVariable = 12;",
+            "let 12 = myVariable;"
+        ],
+        "goodAnswer": "let myVariable = 12;",
+        "modal": "La déclaration et l'initialisation de variables valables nécessite le mot-clé  let, le nom de la variable (en un seul mot), l'opérateur d'assignation  =, la valeur souhaitée pour la variable, et un point-virgule  ;, dans cet ordre. "
+    },
+    {
+        "question": "Quelles propositions ne correspond pas à des types primitifs en JavaScript ?",
+        "answers": [
+            "String",
+            "Array",
+            "Number",
+            "Boolean"
+        ],
+        "goodAnswer": "Array",
+        "modal": "Les trois types primitifs les plus courants en JavaScript sont string, number et boolean"
+    },
+    {
+        "question": "Quelle phrase ci-dessous est vraie au sujet des constantes ?",
+        "answers": [
+            "Une fois déclarées, leur valeur ne peut être modifiée",
+            "On peut déclarer une constante sans l'initialiser",
+            "Leur type peut être modifié après déclaration",
+            "Une constante est limitée à stocker des nombres"
+        ],
+        "goodAnswer": "Une fois déclarées, leur valeur ne peut être modifiée",
+        "modal": "Les constantes peuvent aider à éviter les erreurs et comportements inattendus, car elles ne peuvent pas être modifiées accidentellement. On ne peut pas déclarer une constante sans l'initialiser, et son type ne peut être modifié"
+    },
+    {
+        "question": "En JavaScript, un object est déclaré comme une liste de paires clé/valeur entre…",
+        "answers": [
+            "{} accolades",
+            "[] crochets",
+            "() parenthèses",
+            "aucune des réponses ci-dessus"
+        ],
+        "goodAnswer": "{} accolades",
+        "modal": "Les objects sont déclarés entre des accolades {}"
+    },
+    {
+        "question": "On déclare un array (tableau) comme une liste d'éléments, séparés par des virgules, entre…",
+        "answers": [
+            "{} accolades",
+            "[] crochets",
+            "() parenthèses",
+            "aucune des réponses ci-dessus"
+        ],
+        "goodAnswer": "[] crochets",
+        "modal": "On déclare un array entre crochets []"
     }
 ]

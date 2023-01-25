@@ -88,7 +88,7 @@
         "modal" : "Tout comme les metadonnées ou le titre d'une page, le code pour lier le CSS se place dans entre les balises <head>"
     },
     {
-        "question" : "Combien de régles peut contenir un fichier ?",
+        "question" : "Combien de régles peut contenir un fichier CSS ?",
         "answers" : [
             "Il n'y a pas de limite, on peut en créer autant que l'on veut",
             "Le poids du fichier ne doit pas excéder 20ko",
@@ -114,7 +114,7 @@
         "answers" : [
             "A importer des images",
             "A importer des vidéos",
-            "A faire évoluer le contenu selon la lanue du site",
+            "A faire évoluer le contenu selon la langue du site",
             "A faire évoluer le contenu selon la taille de l'écran"
         ],
         "goodAnswer" : "A faire évoluer le contenu selon la taille de l'écran",

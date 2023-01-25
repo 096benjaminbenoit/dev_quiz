@@ -44,10 +44,10 @@ fetch("quiz.json")
     const btnAnswerValidation = document.querySelector(".quiz_container_buttons__validation");
 
     btnAnswerValidation.addEventListener("click", btnValidation);
-    
+
     function btnValidation(event) {
         event.preventDefault();
-        checkAnswer();
+        checkAnswer(); 
 
         // METTRE A JOUR LE SCORE //
         score.textContent = "Votre score : " + newScore + "pts";  
@@ -67,6 +67,9 @@ fetch("quiz.json")
         function closeModal() {
             modal.style = "display: none;"
         }
+
+        btnNextQuestion.style.display = "block"
+        btnAnswerValidation.style.display = "none"
     }
 
     const btnNextQuestion = document.querySelector(".quiz_container_buttons__next");
@@ -98,8 +101,9 @@ fetch("quiz.json")
         console.log(newScore);
 
         displayLeaderboard();
+        btnAnswerValidation.style.display = "block"
+        btnNextQuestion.style.display = "none"
     }
-
 
     // CHANGER DE COULEUR ET +1 AU SCORE SI RÉPONSE JUSTE //
     function checkAnswer() {
@@ -202,8 +206,6 @@ fetch("quiz.json")
             displayScores()
 
             leaderboardPage.reset();
-
-        
     }
 
     function displayScores() {

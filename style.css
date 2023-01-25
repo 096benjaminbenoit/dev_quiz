@@ -218,7 +218,6 @@ body .quiz_container_buttons {
   margin-top: 20px;
 }
 body .quiz_container_buttons__validation {
-  margin-right: 5px;
   border: none;
   background-color: #ee5522;
   color: white;
@@ -233,7 +232,7 @@ body .quiz_container_buttons__validation:hover {
   cursor: pointer;
 }
 body .quiz_container_buttons__next {
-  margin-left: 5px;
+  display: none;
   border: none;
   background-color: #ee5522;
   color: white;
@@ -466,4 +465,18 @@ body .quiz_leaderboard__line {
   body .quiz_leaderboard__line {
     width: 300px;
   }
+}
+body .quiz_leaderboard__restart {
+  margin-top: 15px;
+  background-color: #ee5522;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 30px;
+  transition: all 0.2s ease;
+  box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.279);
+}
+body .quiz_leaderboard__restart:hover {
+  background-color: #FFBB33;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

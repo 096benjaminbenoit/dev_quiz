@@ -235,7 +235,6 @@ body {
             margin-top: 20px;
 
             &__validation {
-                margin-right: 5px;
                 border: none;
                 background-color: #ee5522;
                 color: white;
@@ -253,7 +252,7 @@ body {
             }
 
             &__next {
-                margin-left: 5px;
+                display: none;
                 border: none;
                 background-color: #ee5522;
                 color: white;
@@ -510,6 +509,22 @@ body {
             @media screen and (min-width: 768px) {
                 width: 300px;
             }
+        }
+
+        &__restart {
+                margin-top: 15px;
+                background-color: #ee5522;
+                color: white;
+                border: none;
+                padding: 5px 10px;
+                border-radius: 30px;
+                transition: all 0.2s ease;
+                box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.279);
+
+                &:hover {
+                    background-color: #FFBB33;
+                    cursor: pointer;
+                }
         }
     }
 }
